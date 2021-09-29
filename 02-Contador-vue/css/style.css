@@ -1,0 +1,33 @@
+html,
+body{
+    background-color: rgb(194, 233, 176);
+    color: rgb(102, 105, 103)
+}
+.app{
+    display:block;
+    text-align: center;
+}
+.count{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+button{
+    background-color: rgb(130, 154, 226);
+    font-weight: bold;
+    font-size: 16px;
+    border:none;
+    width: 59px;
+    height: 55px;
+  
+}
+.buttons{
+   margin:250px;
+   display: flex;
+ 
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(144, 130, 236);
+    
+}

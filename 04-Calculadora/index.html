@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div id="app" class="app">
+        <h2 class="title">{{title}} </h2>
+        <hr>
+        <form>
+            <label>
+                Número 1: <input type="number" v-model.number="n1" />
+            </label>
+            <br /> <br />
+            <label for="">
+                Número 2: <input type="number" v-model.number="n2" />
+            </label>
+        </form>
+        <hr>
+        <p>Suma:{{suma}} </p>
+        <p>Resta:{{resta}} </p>
+        <p>Multiplicación:{{multi}} </p>
+        <p>División:{{divi}} </p>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+
+</html>

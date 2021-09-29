@@ -1,0 +1,50 @@
+v-bind --> meter dentro de lo que nosotros queramos url, servicios de urls
+<a v-bind:href="user.url" target="_blank">Google</a>
+
+v-if --> permite meter codigo y hacer una condicion
+v-else --> hacer una condicion else 
+si alguna de estas condiciones es verdadera solo se vera la verdadera en inspeccionar
+todo eso hace vue por detras
+   <h1 v-if="user.age < 0 || user.age > 110"  class="rango_err ">
+            Tu edad, esta fuera de rango, verificala</h1>
+        <h1 v-else-if="user.age >= 18" class="good"> Eres mayor de edad</h1>
+        <h1 v-else="" class="error">Eres menor de edad</h1>
+class es una clase de css en la cual cambia de color depende si es .good o .error
+
+v-for --> genera elementos n de la etiqueta que tenga
+<ul>
+        <li v-for="(movie,index) in user.movies" :key="index">{{index}} {{movie}}</li>
+        </ul>
+crea tantos li como movies tenga, y se pone :key para poder identificar mas adelante con api
+
+
+
+
+normalize --> hace que no cambien los estilos si la app se abre con navegadores diferentes
+ <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+
+v-on:click --> evento onclick
+<button v-on:click="disCount">-1</button>
+o
+<button @click="addCount">+1</button>
+
+v-model --> realiza un modelo de la info del input 
+<input type="text" placeholder="Nombre" v-model.trim="datos.name"/>
+lo que se escriba en el input se guarda en el json de datos.name
+el . trim es para que si alguien deja espacios en el input no los cuente como letras
+
+v-mode.number --> hace el modelo con el tipo de dato que le pasas
+ <input type="number" v-model.number="datos.age">
+si no le pusiera .number los datos los pasa con string
+
+otro ejemplo
+ <input type="number" v-model.number="datos.age" min="15" max="100">
+el input solo va a poder marcar de 15 hasta 100
+
+
+ <form @submit.prevent="handleSubmit()">
+el prevent no recarga la pagina cuando le doy enviar
+
+TEMPLATE STRING
+alt gr + } 

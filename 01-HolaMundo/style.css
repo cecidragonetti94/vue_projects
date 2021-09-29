@@ -1,0 +1,12 @@
+.good{
+    color:pink;
+    font-size: 5rem;
+}
+.error{
+    color:purple;
+    font-size: 5rem;
+}
+.rango_err{
+    color:rgb(231, 40, 97);
+    font-size: 5rem;
+}
