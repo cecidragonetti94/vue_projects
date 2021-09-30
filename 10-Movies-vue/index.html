@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APi movies</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="app" class="app">
+        <h1 class="title">{{title}} </h1>
+        <hr/>
+        <form @submit.prevent="getMovie" class="form"> 
+            <label>Movie Name : <input type="text" v-model.trim="movieTitle" class="input-style"></label>
+            <input type="submit" value="Get Movie" class="get-movie-input">
+        </form>
+        <div class="container">
+            <h5>Year : <span>{{movieData.Year}}</span> </h5>
+            <h5>Genre : <span>{{movieData.Genre}}</span> </h5>
+            <h5>Actors : <span>{{movieData.Actors}}</span> </h5>
+            <img :src="movieData.Poster">
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+</html>

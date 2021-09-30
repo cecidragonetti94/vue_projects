@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXIOS</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+
+    <script>
+        //axios.get("https://jsonplaceholder.typicode.com/posts")
+        //.then((res)=> console.log(res.data[0]))
+
+        const peticion = async () => {
+            const { data }  = await axios.get("https://jsonplaceholder.typicode.com/posts")
+            const { userId,title, id } = data[0]
+            console.log(`el usuario es: ${userId},el titulo es:${title},el id es:${id}`);
+        }
+        peticion()
+    </script>
+</body>
+
+</html>
